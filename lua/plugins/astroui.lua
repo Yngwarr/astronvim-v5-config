@@ -33,5 +33,10 @@ return {
       LSPLoading9 = "⠇",
       LSPLoading10 = "⠏",
     },
+    -- status = {
+    --   separators = {
+    --     tab = { "", "" },
+    --   },
+    -- },
   },
 }

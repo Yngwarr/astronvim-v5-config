@@ -13,14 +13,19 @@ return {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
       autopairs = false, -- enable autopairs at start
       cmp = true, -- enable completion at start
-      diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
+      -- this fucker doesn't work
+      -- diagnostics = {
+      --   virtual_text = true,
+      --   virtual_lines = false
+      -- },
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
+    -- this fucker also doesn't work
     diagnostics = {
       virtual_text = true,
-      underline = false,
+      virtual_lines = false,
     },
     -- vim options can be configured here
     options = {
