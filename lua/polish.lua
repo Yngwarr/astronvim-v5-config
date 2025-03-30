@@ -41,3 +41,4 @@ require("codecompanion").setup({
 
 -- this hack is dirty, but easier than understanding these fucking astrocore configurations
 vim.diagnostic.config({ virtual_text = true, virtual_lines = false })
+-- vim.opt.showtabline = 0

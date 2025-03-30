@@ -43,6 +43,8 @@ return {
         scrolloff = 0,
         sidescrolloff = 4,
         cmdheight = 1,
+        -- remove the default tabline
+        -- showtabline = 0,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -70,6 +72,10 @@ return {
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+
+        -- navigate diagnostics (ignore the deprecation warning, the actual version throws an error)
+        ["]d"] = { function() vim.diagnostic.goto_next() end, desc = "Next diagnostic" },
+        ["[d"] = { function() vim.diagnostic.goto_prev() end, desc = "Previous diagnostic" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
