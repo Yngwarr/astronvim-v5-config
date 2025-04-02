@@ -205,8 +205,6 @@ return {
       lazy = false
   },
 
-  -- ======== PLUGIN OVERRRIDES ========
-
   {
     "olimorris/codecompanion.nvim",
     config = true,
@@ -215,6 +213,8 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
   },
+
+  -- ======== PLUGIN OVERRRIDES ========
 
   -- customize dashboard options
   {
@@ -246,6 +246,13 @@ return {
       },
       indent = {
         enabled = false,
+      },
+      picker = {
+        formatters = {
+          file = {
+            truncate = 80
+          }
+        }
       },
     },
   },
