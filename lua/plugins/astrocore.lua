@@ -43,6 +43,10 @@ return {
         scrolloff = 0,
         sidescrolloff = 4,
         cmdheight = 1,
+        foldmethod = "expr",
+        foldexpr = "nvim_treesitter#foldexpr()",
+        foldlevel = 99,
+        foldenable = false,
         -- remove the default tabline
         -- showtabline = 0,
       },

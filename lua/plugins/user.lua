@@ -28,6 +28,21 @@ return {
     lazy = false,
     dependencies = { "rktjmp/lush.nvim" }
   },
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    lazy = false
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000
+  },
   -- a local copy for tweaking
   -- {
   --   dir = '/home/igor/naboo/vim/jellybeans-nvim/',
@@ -192,18 +207,18 @@ return {
     },
   },
 
-  {
-      'akinsho/bufferline.nvim',
-      dependencies = 'nvim-tree/nvim-web-devicons',
-      version = "*",
-      opts = {
-          options = {
-              separator_style = 'slant',
-              diagnostics = 'nvim_lsp'
-          }
-      },
-      lazy = false
-  },
+  -- {
+  --     'akinsho/bufferline.nvim',
+  --     dependencies = 'nvim-tree/nvim-web-devicons',
+  --     version = "*",
+  --     opts = {
+  --         options = {
+  --             separator_style = 'slant',
+  --             diagnostics = 'nvim_lsp'
+  --         }
+  --     },
+  --     lazy = false
+  -- },
 
   {
     "olimorris/codecompanion.nvim",
@@ -212,6 +227,11 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
     },
+  },
+
+  {
+    'numToStr/Comment.nvim',
+    enabled = true
   },
 
   -- ======== PLUGIN OVERRRIDES ========
@@ -254,6 +274,10 @@ return {
           }
         }
       },
+    },
+    keys = {
+      -- { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
+      { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
     },
   },
 
